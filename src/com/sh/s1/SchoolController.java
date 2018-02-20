@@ -30,7 +30,12 @@ public class SchoolController {
 				ss.addPoint(s);
 				break;
 			case 3:
-				System.out.println("조회할 학생을 입력하세요");
+				int a=ss.search(s);
+				if(a==-1) {
+					System.out.println("잘못된 번호 입니다.");
+				}else {
+					sv.viewStudent(s,a);
+				}
 				break;
 			case 4:
 				System.out.println("전체 조회");
