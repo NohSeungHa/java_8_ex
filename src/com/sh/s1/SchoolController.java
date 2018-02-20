@@ -27,7 +27,7 @@ public class SchoolController {
 				s=ss.addStudent();
 				break;
 			case 2:
-				System.out.println("성적을 입력하세요");
+				ss.addPoint(s);
 				break;
 			case 3:
 				System.out.println("조회할 학생을 입력하세요");
