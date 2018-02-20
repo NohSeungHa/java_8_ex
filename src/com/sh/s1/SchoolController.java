@@ -16,12 +16,15 @@ public class SchoolController {
 	public void start() {
 		boolean check=true;
 		Scanner sc = new Scanner(System.in);
+		StudentService ss = new StudentService();
+		StudentView sv = new StudentView();
+		Student[] s=null;
 		while(check) {
 			System.out.println("1. 학생등록, 2.성적 입력, 3.성적 조회, 4.전체 조회, 5.프로그램종료");
-			int num = sc.nextInt();
-			switch(num) {
+			int select = sc.nextInt();
+			switch(select) {
 			case 1:
-				System.out.println("학생의 이름을 입력하세요");
+				s=ss.addStudent();
 				break;
 			case 2:
 				System.out.println("성적을 입력하세요");
@@ -31,6 +34,7 @@ public class SchoolController {
 				break;
 			case 4:
 				System.out.println("전체 조회");
+				sv.view(s);
 				break;
 			case 5:
 				System.out.println("프로그램 종료");
