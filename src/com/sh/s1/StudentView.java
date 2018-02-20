@@ -18,14 +18,14 @@ public class StudentView {
 		}
 	}
 	
-	public void viewStudent(Student[] s,int a) {
-		System.out.println("학생의 이름은 : "+s[a].name);
-		System.out.println("학생의 번호는 : "+s[a].number);
-		System.out.println("학생의 국어점수 : "+s[a].kor);
-		System.out.println("학생의 영어점수 : "+s[a].eng);
-		System.out.println("학생의 수학점수 : "+s[a].math);
-		System.out.println("학생의 전체점수 : "+s[a].total);
-		System.out.println("학생의 평균점수 : "+s[a].avg);
+	public void viewStudent(Student t) {
+		System.out.println("학생의 이름은 : "+t.name);
+		System.out.println("학생의 번호는 : "+t.number);
+		System.out.println("학생의 국어점수 : "+t.kor);
+		System.out.println("학생의 영어점수 : "+t.eng);
+		System.out.println("학생의 수학점수 : "+t.math);
+		System.out.println("학생의 전체점수 : "+t.total);
+		System.out.println("학생의 평균점수 : "+t.avg);
 		
 	}
 

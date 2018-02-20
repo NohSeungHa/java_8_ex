@@ -75,17 +75,17 @@ public class StudentService {
 	//번호를 입력 받아서 학생 한명을 찾아서
 	//해당 학생 출력은 StudentView class의 viewStudent메서드에서 출력
 	
-	public int search(Student[] s) {
+	public Student search(Student[] s) {
 		System.out.println("학생의 번호를 입력 하세요.");
 		int num=sc.nextInt();
-		int a=-1;
+		Student[] t = new Student[1];
 		
 		for(int i=0; i<s.length; i++) {
 			if(num==s[i].number) {
-				a=i;
+				t[0]=s[i];
 			}
 		}
-		return a;
+		return t[0];
 	}
 
 }
