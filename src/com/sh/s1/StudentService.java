@@ -39,7 +39,7 @@ public class StudentService {
 	//내용 : 각 학생의 점수 입력
 
 	public Student[] addPoint(Student[] s) {
-/*		System.out.println("학생의 번호를 입력하세요");
+		/*		System.out.println("학생의 번호를 입력하세요");
 		int num=sc.nextInt();
 		boolean check = true;
 		for(int i=0; i<s.length; i++) {
@@ -74,12 +74,12 @@ public class StudentService {
 	//search 메서드명
 	//번호를 입력 받아서 학생 한명을 찾아서
 	//해당 학생 출력은 StudentView class의 viewStudent메서드에서 출력
-	
+
 	public Student search(Student[] s) {
 		System.out.println("학생의 번호를 입력 하세요.");
 		int num=sc.nextInt();
 		Student[] t = new Student[1];
-		
+
 		for(int i=0; i<s.length; i++) {
 			if(num==s[i].number) {
 				t[0]=s[i];
