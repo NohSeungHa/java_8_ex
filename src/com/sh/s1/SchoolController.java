@@ -19,7 +19,7 @@ public class SchoolController {
 		StudentService ss = new StudentService();
 		StudentView sv = new StudentView();
 		Student[] s=null;
-		Student t=null;
+
 		while(check) {
 			System.out.println("1. 학생등록, 2.성적 입력, 3.성적 조회, 4.전체 조회, 5.프로그램종료");
 			int select = sc.nextInt();
@@ -31,11 +31,15 @@ public class SchoolController {
 				ss.addPoint(s);
 				break;
 			case 3:
-				t=ss.search(s);
+				if(s!=null) {
+				Student t=ss.search(s);
 				if(t!=null) {
-					sv.viewStudent(t);
+					sv.view(t);
 				}else {
-					System.out.println("잘못 된 번호");
+					sv.view("해당 번호의 학생이 없습니다.");
+				}
+				}else {
+					sv.view("학생 정보를 먼저 입력하세요.");
 				}
 				break;
 			case 4:

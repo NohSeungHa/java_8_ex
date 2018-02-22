@@ -5,20 +5,11 @@ public class StudentView {
 	//학생들의 정보를 출력
 	//메서드명 view
 	//학생들의 정보를 출력
-	public void view(Student[] s) {
-
-		for(int i=0; i<s.length; i++) {
-			System.out.println("학생의 이름은 : "+s[i].name);
-			System.out.println("학생의 번호는 : "+s[i].number);
-			System.out.println("학생의 국어점수 : "+s[i].kor);
-			System.out.println("학생의 영어점수 : "+s[i].eng);
-			System.out.println("학생의 수학점수 : "+s[i].math);
-			System.out.println("학생의 전체점수 : "+s[i].total);
-			System.out.println("학생의 평균점수 : "+s[i].avg);
-		}
+	public void view(String message) {
+		System.out.println(message);
 	}
 	
-	public void viewStudent(Student t) {
+	public void view(Student t) {
 		System.out.println("학생의 이름은 : "+t.name);
 		System.out.println("학생의 번호는 : "+t.number);
 		System.out.println("학생의 국어점수 : "+t.kor);
@@ -27,6 +18,12 @@ public class StudentView {
 		System.out.println("학생의 전체점수 : "+t.total);
 		System.out.println("학생의 평균점수 : "+t.avg);
 		
+	}
+	public void view(Student[] s) {
+		
+		for(int i=0; i<s.length; i++) {
+			this.view(s[i]);
+		}
 	}
 
 

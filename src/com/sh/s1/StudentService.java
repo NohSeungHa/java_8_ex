@@ -78,14 +78,15 @@ public class StudentService {
 	public Student search(Student[] s) {
 		System.out.println("학생의 번호를 입력 하세요.");
 		int num=sc.nextInt();
-		Student[] t = new Student[1];
+		Student t =null;
 
 		for(int i=0; i<s.length; i++) {
 			if(num==s[i].number) {
-				t[0]=s[i];
+				t=s[i];
+				break;
 			}
 		}
-		return t[0];
+		return t;
 	}
 
 }
